@@ -3,6 +3,7 @@ import DashboardTabs from "@/components/dashboard-tabs";
 import DashboardContent from "@/components/dashboard-content";
 import DashboardLinks from "@/components/dashboard-links";
 import { CarouselSize } from "@/components/carousel-item";
+import { AccordionDemo } from "@/components/accordion-demo";
 
 export default function DashboardPage() {
   return (
@@ -12,6 +13,7 @@ export default function DashboardPage() {
       <DashboardContent />
       <CarouselSize />
       <DashboardLinks />
+      <AccordionDemo />
     </main>
   );
 }
