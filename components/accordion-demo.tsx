@@ -3,32 +3,39 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-  } from "@/components/ui/accordion"
-  
-  export function AccordionDemo() {
+} from "@/components/ui/accordion";
+
+export function AccordionDemo() {
     return (
-      <Accordion type="single" collapsible className="w-full">
-        <AccordionItem value="item-1">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-2">
-          <AccordionTrigger>Is it styled?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It comes with default styles that matches the other
-            components&apos; aesthetic.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-3">
-          <AccordionTrigger>Is it animated?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It&apos;s animated by default, but you can disable it if you
-            prefer.
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
-    )
-  }
-  
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+            <div style={{ width: "300px", height: "300px" }}>
+                <Accordion type="single" collapsible className="w-full h-full">
+                    {accordionItems.map((item) => (
+                        <AccordionItem key={item.value} value={item.value}>
+                            <AccordionTrigger>{item.question}</AccordionTrigger>
+                            <AccordionContent>{item.answer}</AccordionContent>
+                        </AccordionItem>
+                    ))}
+                </Accordion>
+            </div>
+        </div>
+    );
+}
+
+const accordionItems = [
+    {
+        value: "item-1",
+        question: "Is it accessible?",
+        answer: "Yes. It adheres to the WAI-ARIA design pattern.",
+    },
+    {
+        value: "item-2",
+        question: "Is it styled?",
+        answer: "Yes. It comes with default styles that matches the other components' aesthetic.",
+    },
+    {
+        value: "item-3",
+        question: "Is it animated?",
+        answer: "Yes. It's animated by default, but you can disable it if you prefer.",
+    },
+];
