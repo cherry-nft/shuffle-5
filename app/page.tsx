@@ -1,7 +1,7 @@
 import DashboardNav from "@/components/dashboard-nav";
 import DashboardTabs from "@/components/dashboard-tabs";
 import DashboardContent from "@/components/dashboard-content";
-import DashboardRowCard from "@/components/dashboard-row-card";
+import DashboardProject from "@/components/dashboard-project";
 
 export default function DashboardPage() {
   return (
@@ -9,7 +9,7 @@ export default function DashboardPage() {
       <DashboardNav />
       <DashboardTabs />
       <DashboardContent />
-      <DashboardRowCard />
+      <DashboardProject />
     </main>
   );
 }
