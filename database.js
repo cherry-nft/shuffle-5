@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const { Client } = require('pg')
 
 const client = new Client({
@@ -20,5 +22,6 @@ async function main() {
 
   await client.end()
 }
+
 
 main().catch(console.error)
