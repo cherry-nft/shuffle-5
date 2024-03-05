@@ -4,7 +4,6 @@ import DashboardContent from "@/components/dashboard-content";
 import DashboardLinks from "@/components/dashboard-links";
 import { CarouselSize } from "@/components/carousel-item";
 import { AccordionDemo } from "@/components/accordion-demo";
-import { DrawerDialogDemo } from "@/components/mint-popup";
 
 export default function DashboardPage() {
   return (
@@ -15,7 +14,6 @@ export default function DashboardPage() {
       <CarouselSize />
       <DashboardLinks />
       <AccordionDemo />
-      <DrawerDialogDemo />
     </main>
   );
 }
